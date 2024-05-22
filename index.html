@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Web Page</title>
+    <link rel="stylesheet" href="B:\Блог КРИМ\styles.css">
+    <style>
+        body.light-theme {
+            background:  #9370DB;
+            color: black;
+        }
+        body.dark-theme {
+            background-color: black;
+            color: white;
+        }
+        .gallery-container {
+            position: relative;
+            width: 300px; /* Fixed size for images */
+            height: 300px; /* Fixed size for images */
+            margin: auto;
+        }
+        .gallery img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .gallery .btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+        .gallery .prev {
+            left: 0;
+        }
+        .gallery .next {
+            right: 0;
+        }
+        iframe {
+            width: 100%;
+            height: 400px;
+            border: none;
+        }
+
+        header {
+            background-color: #333;
+            padding: 10px; /* Поля внутри шапки */
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo img {
+            width: 50px;
+            margin-right: 10px;
+        }
+        
+        .logo h1 {
+            font-size: 24px;
+            color: rgb(0, 0, 0);
+            margin: 0; /* Убирает внешние отступы у заголовка */
+        }
+        
+        #frameContainer {
+            width: 80%;
+            margin: 50px auto;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            
+                background: linear-gradient(135deg, #FFC0CB, #9370DB, #4B0082, #800080);
+               
+           
+           
+        }
+        
+        
+    
+        iframe {
+            width: 100%;
+            height: 500px;
+            border: none;
+            border-radius: 20px;
+        }
+    
+        h1, p, ul, li {
+            color: #343a40;
+            margin: 0;
+            padding: 20px;
+        }
+    
+        ul {
+            padding-left: 20px;
+
+
+        }
+
+  
+    </style>
+</head>
+<body class="light-theme">
+    <header>
+
+        <div class="logo">
+            <img src="D:\Opera\Remove-bg.ai_1716325270546.png" alt="Описание логотипа">
+            <h1>Чертоги разума!</h1>
+        </div>
+        
+
+        <div class="menu-container">
+            <ul class="menu">
+                <li><a href="B:\Блог КРИМ\index.html">Главная</a></li>
+                <li><a href="B:\Блог КРИМ\gallery.html">Галерея</a></li>
+                <li><a href="B:\Блог КРИМ\article.html">Статьи</a></li>
+                <li>
+                    <a href="#">О блоге</a>
+                    <ul>
+                        <li><a href="B:\Блог КРИМ\author.html">Автор</a></li>
+                        <li><a href="B:\Блог КРИМ\social-media.html">Соц. сети</a></li>
+                        <li><a href="B:\Блог КРИМ\polres.html">Полезные ресурсы</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Обратная связь</a>
+                    <ul>
+                        <li><a href="B:\Блог КРИМ\FAQ.html">Частые вопросы</a></li>
+                        <li><a href="B:\Блог КРИМ\zv.html">Задать вопрос</a></li>
+                        <li><a href="B:\Блог КРИМ\pozh.html">Пожелания</a></li>
+                    </ul>
+                </li>
+                <li><a href="B:\Блог КРИМ\avtoriz.html">Авторизоваться</a></li>
+            </ul>
+        </div>
+        <div class="theme-toggle" onclick="toggleTheme()">Сменить тему</div>
+    </header>
+    <main>
+        
+        
+
+
+        <div id="frameContainer">
+            <iframe srcdoc="
+                <!DOCTYPE html>
+                <html lang='ru'>
+                <head>
+                <meta charset='UTF-8'>
+                <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+                <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+                <title>Добро пожаловать на сайт &quot;Чертоги разума&quot;!</title>
+                <style>
+                    body.light-theme {
+                        background: linear-gradient(135deg, #FFC0CB, #9370DB, #4B0082, #800080);
+                        color: black;
+                    }
+                    
+                    body.dark-theme {
+                        background: linear-gradient(135deg, #FFC0CB, #9370DB, #4B0082, #800080);
+                        color: white;
+                    }
+                    
+                    .gallery-container {
+                        position: relative;
+                        width: 300px; /* Fixed size for images */
+                        height: 300px; /* Fixed size for images */
+                        margin: auto;
+                    }
+                    .gallery img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                    .gallery .btn {
+                        position: absolute;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        background-color: rgba(0, 0, 0, 0.5);
+                        color: white;
+                        border: none;
+                        padding: 10px;
+                        cursor: pointer;
+                    }
+                    .gallery .prev {
+                        left: 0;
+                    }
+                    .gallery .next {
+                        right: 0;
+                    }
+                    iframe {
+                        width: 100%;
+                        height: 400px;
+                        border: none;
+                    }
+            
+                    header {
+                        background-color: #333;
+                        padding: 10px; /* Поля внутри шапки */
+                    }
+                    
+                    .logo {
+                        display: flex;
+                        align-items: center;
+                    }
+                    
+                    .logo img {
+                        width: 50px;
+                        margin-right: 10px;
+                    }
+                    
+                    .logo h1 {
+                        font-size: 24px;
+                        color: rgb(0, 0, 0);
+                        margin: 0; /* Убирает внешние отступы у заголовка */
+                    }
+                    
+                    #frameContainer {
+                        width: 80%;
+                        margin: 50px auto;
+                        border-radius: 20px;
+                        overflow: hidden;
+                        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                    }
+                
+                    iframe {
+                        width: 100%;
+                        height: 500px;
+                        border: none;
+                        border-radius: 20px;
+                    }
+                
+                    h1, p, ul, li {
+                        color: #343a40;
+                        margin: 0;
+                        padding: 20px;
+                    }
+                
+                    ul {
+                        padding-left: 20px;
+                    }
+                
+                </style>
+                </head>
+                <body>
+                <h1>Добро пожаловать на сайт &quot;Чертоги разума&quot;!</h1>
+                <p>Мы рады приветствовать вас на нашем сайте, посвященном увлекательным фактам и последним новостям в области криминалистики. Здесь вы найдете интересные статьи, обзоры и аналитические материалы о самых актуальных темах и разработках в сфере судебной экспертизы и расследований преступлений.</p>
+                <p>Наши темы включают:</p>
+                <ul>
+                    <li>Интересные факты из мира криминалистики.</li>
+                    <li>Новости о последних технологиях и методах в расследованиях преступлений.</li>
+                    <li>Исследования и статьи от ведущих специалистов в области.</li>
+                </ul>
+                <p>Мы стараемся предоставить вам самую актуальную и интересную информацию о криминалистике, помогая вам понять сложные процессы и технологии, используемые в этой увлекательной области науки.</p>
+                <p>Подписывайтесь на нашу рассылку, чтобы быть в курсе всех новостей и обновлений. Присоединяйтесь к нам в социальных сетях, чтобы обсудить новости и делиться своим мнением.</p>
+                <p>С уважением, <br>Команда &quot;Чертоги разума&quot;</p>
+                </body>
+                </html>
+            "></iframe>
+        </div>
+        
+
+        
+    </main>
+    <footer>
+        <p>Контактная информация: Телефон - +7(747)125-2945 | Email - next12d@gmail.com | Подписывайтесь на нас в социальных сетях</p>
+    </footer>
+    <script>
+        const images = [
+            "https://picsum.photos/300?random=1",
+            "https://picsum.photos/300?random=2",
+            "https://picsum.photos/300?random=3",
+            "https://picsum.photos/300?random=4",
+            "https://picsum.photos/300?random=5",
+            "https://picsum.photos/300?random=6",
+            "https://picsum.photos/300?random=7",
+            "https://picsum.photos/300?random=8",
+            "https://picsum.photos/300?random=9",
+            "https://picsum.photos/300?random=10",
+            "https://picsum.photos/300?random=11",
+            "https://picsum.photos/300?random=12",
+            "https://picsum.photos/300?random=13",
+            "https://picsum.photos/300?random=14",
+            "https://picsum.photos/300?random=15",
+            "https://picsum.photos/300?random=16",
+            "https://picsum.photos/300?random=17",
+            "https://picsum.photos/300?random=18",
+            "https://picsum.photos/300?random=19",
+            "https://picsum.photos/300?random=20",
+            "https://picsum.photos/300?random=21",
+            "https://picsum.photos/300?random=22",
+            "https://picsum.photos/300?random=23",
+            "https://picsum.photos/300?random=24",
+            "https://picsum.photos/300?random=25",
+            "https://picsum.photos/300?random=26",
+            "https://picsum.photos/300?random=27",
+            "https://picsum.photos/300?random=28",
+            "https://picsum.photos/300?random=29",
+            "https://picsum.photos/300?random=30",
+            "https://picsum.photos/300?random=31",
+            "https://picsum.photos/300?random=32",
+            "https://picsum.photos/300?random=33",
+            "https://picsum.photos/300?random=34",
+            "https://picsum.photos/300?random=35",
+            "https://picsum.photos/300?random=36",
+            "https://picsum.photos/300?random=37",
+            "https://picsum.photos/300?random=38",
+            "https://picsum.photos/300?random=39",
+            "https://picsum.photos/300?random=40",
+            "https://picsum.photos/300?random=41",
+            "https://picsum.photos/300?random=42",
+            "https://picsum.photos/300?random=43",
+            "https://picsum.photos/300?random=44",
+            "https://picsum.photos/300?random=45",
+            "https://picsum.photos/300?random=46",
+            "https://picsum.photos/300?random=47",
+            "https://picsum.photos/300?random=48",
+            "https://picsum.photos/300?random=49",
+            "https://picsum.photos/300?random=50",
+            "https://picsum.photos/300?random=51",
+            "https://picsum.photos/300?random=52",
+            "https://picsum.photos/300?random=53",
+            "https://picsum.photos/300?random=54",
+            "https://picsum.photos/300?random=55",
+            "https://picsum.photos/300?random=56",
+            "https://picsum.photos/300?random=57",
+            "https://picsum.photos/300?random=58",
+            "https://picsum.photos/300?random=59",
+            "https://picsum.photos/300?random=60",
+            "https://picsum.photos/300?random=61",
+            "https://picsum.photos/300?random=62",
+            "https://picsum.photos/300?random=63",
+            "https://picsum.photos/300?random=64",
+            "https://picsum.photos/300?random=65",
+            "https://picsum.photos/300?random=66",
+            "https://picsum.photos/300?random=67",
+            "https://picsum.photos/300?random=68",
+            "https://picsum.photos/300?random=69",
+            "https://picsum.photos/300?random=70",
+            "https://picsum.photos/300?random=71",
+            "https://picsum.photos/300?random=72",
+            "https://picsum.photos/300?random=73",
+            "https://picsum.photos/300?random=74",
+            "https://picsum.photos/300?random=75",
+            "https://picsum.photos/300?random=76",
+            "https://picsum.photos/300?random=77",
+            "https://picsum.photos/300?random=78",
+            "https://picsum.photos/300?random=79",
+            "https://picsum.photos/300?random=80",
+            "https://picsum.photos/300?random=81",
+            "https://picsum.photos/300?random=82",
+            "https://picsum.photos/300?random=83",
+            "https://picsum.photos/300?random=84",
+            "https://picsum.photos/300?random=85",
+            "https://picsum.photos/300?random=86",
+            "https://picsum.photos/300?random=87",
+            "https://picsum.photos/300?random=88",
+            "https://picsum.photos/300?random=89",
+            "https://picsum.photos/300?random=90",
+            "https://picsum.photos/300?random=91",
+            "https://picsum.photos/300?random=92",
+            "https://picsum.photos/300?random=93",
+            "https://picsum.photos/300?random=94",
+            "https://picsum.photos/300?random=95",
+            "https://picsum.photos/300?random=96",
+            "https://picsum.photos/300?random=97",
+            "https://picsum.photos/300?random=98",
+            "https://picsum.photos/300?random=99",
+            "https://picsum.photos/300?random=100"
+        ];
+
+        let currentIndex = 0;
+
+        function showImage(index) {
+            const img = document.getElementById('current-image');
+            img.src = images[index];
+        }
+
+        function prevImage() {
+            currentIndex = (currentIndex > 0) ? currentIndex - 1 : images.length - 1;
+            showImage(currentIndex);
+        }
+
+        function nextImage() {
+            currentIndex = (currentIndex < images.length - 1) ? currentIndex + 1 : 0;
+            showImage(currentIndex);
+        }
+
+        function toggleTheme() {
+            const body = document.body;
+            if (body.classList.contains('light-theme')) {
+                body.classList.remove('light-theme');
+                body.classList.add('dark-theme');
+            } else {
+                body.classList.remove('dark-theme');
+                body.classList.add('light-theme');
+            }
+        }
+
+        // Initial display of the first image
+        showImage(currentIndex);
+
+
+
+
+
+        // Проверяем, есть ли уже сохраненная тема в локальном хранилище
+if (localStorage.getItem('theme') === 'dark') {
+    document.body.classList.add('dark-theme'); // Добавляем класс для темной темы
+}
+
+// Обработчик события изменения темы
+function toggleTheme() {
+    document.body.classList.toggle('dark-theme'); // Переключаем класс для темной темы
+    // Сохраняем выбранную тему в локальное хранилище
+    localStorage.setItem('theme', document.body.classList.contains('dark-theme') ? 'dark' : 'light');
+}
+
+// Привязываем обработчик к кнопке переключения темы
+document.getElementById('theme-toggle').addEventListener('click', toggleTheme);
+
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    document.querySelector('body').classList.add('fade-in');
+});
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Частые вопросы</title>
+    <link rel="stylesheet" href="B:\Блог КРИМ\styles.css">
+    <style>
+        body.light-theme {
+            background-color: white;
+            color: black;
+        }
+        body.light-theme .faq {
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            color: black;
+        }
+        body.dark-theme {
+            background-color: black;
+            color: white;
+        }
+        body.dark-theme .faq {
+            background-color: #333;
+            border: 1px solid #444;
+            color: white;
+        }
+        .faq-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+        .faq {
+            border-radius: 10px;
+            width: 80%;
+            max-width: 600px;
+            margin: 10px 0;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+        }
+        .faq h3 {
+            margin: 0;
+        }
+        .faq p {
+            display: none;
+            margin-top: 10px;
+        }
+        .theme-toggle {
+            cursor: pointer;
+            margin: 10px;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+
+
+        header {
+            background-color: #333;
+            padding: 10px; /* Поля внутри шапки */
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo img {
+            width: 50px;
+            margin-right: 10px;
+        }
+        
+        .logo h1 {
+            font-size: 24px;
+            color: rgb(0, 0, 0);
+            margin: 0; /* Убирает внешние отступы у заголовка */
+        }
+
+
+     
+
+    </style>
+</head>
+<body class="light-theme">
+    <header>
+
+        <div class="logo">
+            <img src="D:\Opera\Remove-bg.ai_1716325270546.png" alt="Описание логотипа">
+            <h1>Чертоги разума!</h1>
+        </div>
+
+        <div class="menu-container">
+            <ul class="menu">
+                <li><a href="B:\Блог КРИМ\index.html">Главная</a></li>
+                <li><a href="B:\Блог КРИМ\gallery.html">Галерея</a></li>
+                <li><a href="B:\Блог КРИМ\article.html">Статьи</a></li>
+                <li>
+                    <a href="#">О блоге</a>
+                    <ul>
+                        <li><a href="B:\Блог КРИМ\author.html">Автор</a></li>
+                        <li><a href="B:\Блог КРИМ\social-media.html">Соц. сети</a></li>
+                        <li><a href="B:\Блог КРИМ\polres.html">Полезные ресурсы</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Обратная связь</a>
+                    <ul>
+                        <li><a href="B:\Блог КРИМ\FAQ.html">Частые вопросы</a></li>
+                        <li><a href="B:\Блог КРИМ\zv.html">Задать вопрос</a></li>
+                        <li><a href="B:\Блог КРИМ\pozh.html">Пожелания</a></li>
+                    </ul>
+                </li>
+                <li><a href="B:\Блог КРИМ\avtoriz.html">Авторизоваться</a></li>
+            </ul>
+        </div>
+        <div class="theme-toggle" onclick="toggleTheme()">Сменить тему</div>
+    </header>
+    <main>
+        <div class="faq-container">
+            <div class="faq">
+                <h3 onclick="toggleAnswer(this)">Вопрос 1: Как изменить тему сайта?</h3>
+                <p>Ответ: Вы можете изменить тему сайта, нажав на кнопку "Сменить тему" в верхней части страницы.</p>
+            </div>
+            <div class="faq">
+                <h3 onclick="toggleAnswer(this)">Вопрос 2: Как добавить статью на сайт?</h3>
+                <p>Ответ: Чтобы добавить статью, перейдите в раздел "Статьи" и нажмите на кнопку "Добавить статью". Заполните форму и отправьте её.</p>
+            </div>
+            <div class="faq">
+                <h3 onclick="toggleAnswer(this)">Вопрос 3: Как связаться с автором блога?</h3>
+                <p>Ответ: Вы можете связаться с автором через раздел "Соц. сети" или отправив сообщение через форму обратной связи.</p>
+            </div>
+            <div class="faq">
+                <h3 onclick="toggleAnswer(this)">Вопрос 4: Как можно подписаться на обновления блога?</h3>
+                <p>Ответ: Вы можете подписаться на обновления блога, введя свой email в форму подписки, которая находится внизу каждой страницы.</p>
+            </div>
+            <div class="faq">
+                <h3 onclick="toggleAnswer(this)">Вопрос 5: Как можно оставлять комментарии к статьям?</h3>
+                <p>Ответ: Чтобы оставить комментарий к статье, вам нужно авторизоваться на сайте. После этого вы сможете оставлять комментарии под каждой статьей.</p>
+            </div>
+            <div class="faq">
+                <h3 onclick="toggleAnswer(this)">Вопрос 6: Как изменить информацию в своем профиле?</h3>
+                <p>Ответ: Для изменения информации в профиле, перейдите в раздел "Настройки профиля" после авторизации и внесите необходимые изменения.</p>
+            </div>
+            <div class="faq">
+                <h3 onclick="toggleAnswer(this)">Вопрос 7: Что делать, если я забыл пароль?</h3>
+                <p>Ответ: Если вы забыли пароль, нажмите на ссылку "Забыли пароль?" на странице авторизации и следуйте инструкциям для восстановления пароля.</p>
+            </div>
+            <div class="faq">
+                <h3 onclick="toggleAnswer(this)">Вопрос 8: Как удалить свой аккаунт?</h3>
+                <p>Ответ: Чтобы удалить свой аккаунт, перейдите в раздел "Настройки профиля" и нажмите на кнопку "Удалить аккаунт". Следуйте инструкциям на экране.</p>
+            </div>
+            <div class="faq">
+                <h3 onclick="toggleAnswer(this)">Вопрос 9: Как добавить фото в галерею?</h3>
+                <p>Ответ: Чтобы добавить фото в галерею, перейдите в раздел "Галерея" и нажмите на кнопку "Добавить фото". Выберите файл и загрузите его.</p>
+            </div>
+            <div class="faq">
+                <h3 onclick="toggleAnswer(this)">Вопрос 10: Как связаться с поддержкой?</h3>
+                <p>Ответ: Вы можете связаться с поддержкой, отправив сообщение через форму обратной связи или написав на email support@example.com.</p>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>Контактная информация: Телефон - +7(747)125-2945 | Email - next12d@gmail.com | Подписывайтесь на нас в социальных сетях</p>
+    </footer>
+    <script>
+        function toggleAnswer(element) {
+            const answer = element.nextElementSibling;
+            if (answer.style.display === "none" || answer.style.display === "") {
+                answer.style.display = "block";
+            } else {
+                answer.style.display = "none";
+            }
+        }
+
+        function toggleTheme() {
+            const body = document.body;
+            if (body.classList.contains('light-theme')) {
+                body.classList.remove('light-theme');
+                body.classList.add('dark-theme');
+            } else {
+                body.classList.remove('dark-theme');
+                body.classList.add('light-theme');
+            }
+        }
+
+
+
+        // Проверяем, есть ли уже сохраненная тема в локальном хранилище
+if (localStorage.getItem('theme') === 'dark') {
+    document.body.classList.add('dark-theme'); // Добавляем класс для темной темы
+}
+
+// Обработчик события изменения темы
+function toggleTheme() {
+    document.body.classList.toggle('dark-theme'); // Переключаем класс для темной темы
+    // Сохраняем выбранную тему в локальное хранилище
+    localStorage.setItem('theme', document.body.classList.contains('dark-theme') ? 'dark' : 'light');
+}
+
+// Привязываем обработчик к кнопке переключения темы
+document.getElementById('theme-toggle').addEventListener('click', toggleTheme);
+
+
+
+
+    </script>
+</body>
+</html>

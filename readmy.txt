@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Частые вопросы</title>
+    <link rel="stylesheet" href="B:\Блог КРИМ\styles.css">
+    
+</head>
+<body class="light-theme">
+    <header>
+        <div class="menu-container">
+            <ul class="menu">
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="gallery.html">Галерея</a></li>
+                <li><a href="article.html">Статьи</a></li>
+                <li>
+                    <a href="#">О блоге</a>
+                    <ul>
+                        <li><a href="author.html">Автор</a></li>
+                        <li><a href="social-media.html">Соц. сети</a></li>
+                        <li><a href="polres.html">Полезные ресурсы</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Обратная связь</a>
+                    <ul>
+                        <li><a href="faq.html">Частые вопросы</a></li>
+                        <li><a href="#">Задать вопрос</a></li>
+                        <li><a href="#">Пожелания</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Авторизоваться</a></li>
+            </ul>
+        </div>
+        <div class="theme-toggle" onclick="toggleTheme()">Сменить тему</div>
+    </header>
+    <main>
+        <div class="faq-container">
+            <div class="faq">
+                <h3 onclick="toggleAnswer(this)">Вопрос 1: Как изменить тему сайта?</h3>
+                <p>Ответ: Вы можете изменить тему сайта, нажав на кнопку "Сменить тему" в верхней части страницы.</p>
+            </div>
+            <div class="faq">
+                <h3 onclick="toggleAnswer(this)">Вопрос 2: Как добавить статью на сайт?</h3>
+                <p>Ответ: Чтобы добавить статью, перейдите в раздел "Статьи" и нажмите на кнопку "Добавить статью". Заполните форму и отправьте её.</p>
+            </div>
+            <div class="faq">
+                <h3 onclick="toggleAnswer(this)">Вопрос 3: Как связаться с автором блога?</h3>
+                <p>Ответ: Вы можете связаться с автором через раздел "Соц. сети" или отправив сообщение через форму обратной связи.</p>
+            </div>
+            <div class="faq">
+                <h3 onclick="toggleAnswer(this)">Вопрос 4: Как можно подписаться на обновления блога?</h3>
+                <p>Ответ: Вы можете подписаться на обновления блога, введя свой email в форму подписки, которая находится внизу каждой страницы.</p>
+            </div>
+            <div class="faq">
+                <h3 onclick="toggleAnswer(this)">Вопрос 5: Как можно оставлять комментарии к статьям?</h3>
+                <p>Ответ: Чтобы оставить комментарий к статье, вам нужно авторизоваться на сайте. После этого вы сможете оставлять комментарии под каждой статьей.</p>
+            </div>
+            <div class="faq">
+                <h3 onclick="toggleAnswer(this)">Вопрос 6: Как изменить информацию в своем профиле?</h3>
+                <p>Ответ: Для изменения информации в профиле, перейдите в раздел "Настройки профиля" после авторизации и внесите необходимые изменения.</p>
+            </div>
+            <div class="faq">
+                <h3 onclick="toggleAnswer(this)">Вопрос 7: Что делать, если я забыл пароль?</h3>
+                <p>Ответ: Если вы забыли пароль, нажмите на ссылку "Забыли пароль?" на странице авторизации и следуйте инструкциям для восстановления пароля.</p>
+            </div>
+            <div class="faq">
+                <h3 onclick="toggleAnswer(this)">Вопрос 8: Как удалить свой аккаунт?</h3>
+                <p>Ответ: Чтобы удалить свой аккаунт, перейдите в раздел "Настройки профиля" и нажмите на кнопку "Удалить аккаунт". Следуйте инструкциям на экране.</p>
+            </div>
+            <div class="faq">
+                <h3 onclick="toggleAnswer(this)">Вопрос 9: Как добавить фото в галерею?</h3>
+                <p>Ответ: Чтобы добавить фото в галерею, перейдите в раздел "Галерея" и нажмите на кнопку "Добавить фото". Выберите файл и загрузите его.</p>
+            </div>
+            <div class="faq">
+                <h3 onclick="toggleAnswer(this)">Вопрос 10: Как связаться с поддержкой?</h3>
+                <p>Ответ: Вы можете связаться с поддержкой, отправив сообщение через форму обратной связи или написав на email support@example.com.</p>
+            </div>
+            <!-- Добавьте дополнительные вопросы и ответы по мере необходимости -->
+        </div>
+    </main>
+    <footer>
+        <p>Контактная информация: Телефон - (123) 456-7890 | Email - example@example.com | Подписывайтесь на нас в социальных сетях</p>
+    </footer>
+    <script>
+        function toggleTheme() {
+            const body = document.body;
+            if (body.classList.contains('light-theme')) {
+                body.classList.remove('light-theme');
+                body.classList.add('dark-theme');
+            } else {
+                body.classList.remove('dark-theme');
+                body.classList.add('light-theme');
+            }
+        }
+
+        function toggleAnswer(element) {
+            const answer = element.nextElementSibling;
+            if (answer.style.display === "none" || answer.style.display === "") {
+                answer.style.display = "block";
+            } else {
+                answer.style.display = "none";
+            }
+        }
+
+    
+            function toggleAnswer(element) {
+                const answer = element.nextElementSibling;
+                if (answer.style.display === "none" || answer.style.display === "") {
+                    answer.style.display = "block";
+                } else {
+                    answer.style.display = "none";
+                }
+            }
+    
+            function toggleTheme() {
+                const body = document.body;
+                if (body.classList.contains('light-theme')) {
+                    body.classList.remove('light-theme');
+                    body.classList.add('dark-theme');
+                } else {
+                    body.classList.remove('dark-theme');
+                    body.classList.add('light-theme');
+                }
+            }
+        </script>
+    </script>
+</body>
+</html>
+
+
+
+
+ html{
+  background: black;
+  height: 100%;
+  position: relative;
+  overflow: auto;
+ 
+}
+
+.container{
+  height: 300px;
+  width: 300px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -150px 0 0 -150px;
+
+ 
+  
+}
+
+.square{
+  height: 94%;
+  width: 94%;
+  background: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -47% 0 0 -47%;
+  
+}
+
+.black{ 
+  background: black;  
+  animation: rotate 10s infinite linear; 
+}
+
+@keyframes rotate{
+  0%{ transform: rotate(0deg); }
+	100%{ transform: rotate(360deg); }	
+}
+    
+
+<div class="container">
+            <div class="square black">
+            <div class="square">
+            <div class="square black">
+            <div class="square">
+            <div class="square black">
+            <div class="square">
+            <div class="square black">
+            <div class="square">
+            <div class="square black">
+            <div class="square">
+            <div class="square black">
+            <div class="square">
+            <div class="square black">
+            <div class="square">
+            <div class="square black">
+            <div class="square">
+            <div class="square black">
+            <div class="square">
+            <div class="square black">
+            <div class="square">
+            <div class="square black">
+            <div class="square">
+            <div class="square black">
+            <div class="square">
+            <div class="square black">
+            <div class="square">
+            <div class="square black">
+            <div class="square">
+            <div class="square black">
+            </div>
+            </div>
+            </div>
+            </div>
+            </div>
+            </div>
+            </div>
+            </div>
+            </div>
+            </div>
+            </div>
+            </div>
+            </div>
+            </div>
+            </div>
+            </div>
+            </div>
+            </div>
+            </div>
+            </div>
+            </div>
+            </div>
+            </div>
+            </div>
+            </div>
+            </div>
+            </div>
+            </div>
+            </div>
+            </div>
+
+
+
+

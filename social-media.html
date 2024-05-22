@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Социальные сети - Название блога</title>
+    <link rel="stylesheet" href="B:\Блог КРИМ\styles.css">
+    <style>
+        body.light-theme {
+            background-color: white;
+            color: black;
+        }
+        body.dark-theme {
+            background-color: black;
+            color: white;
+        }
+        .content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .content h1 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        .content p {
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+        .social-description {
+            margin-bottom: 20px;
+        }
+
+        header {
+            background-color: #333;
+            padding: 10px; /* Поля внутри шапки */
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo img {
+            width: 50px;
+            margin-right: 10px;
+        }
+        
+        .logo h1 {
+            font-size: 24px;
+            color: rgb(0, 0, 0);
+            margin: 0; /* Убирает внешние отступы у заголовка */
+        }
+
+     
+
+
+    </style>
+</head>
+<body class="light-theme">
+    <header>
+
+        <div class="logo">
+            <img src="D:\Opera\Remove-bg.ai_1716325270546.png" alt="Описание логотипа">
+            <h1>Чертоги разума!</h1>
+        </div>
+
+        <!-- Ваша навигационная панель -->
+        <div class="menu-container">
+            <ul class="menu">
+                <li><a href="B:\Блог КРИМ\index.html">Главная</a></li>
+                <li><a href="B:\Блог КРИМ\gallery.html">Галерея</a></li>
+                <li><a href="B:\Блог КРИМ\article.html">Статьи</a></li>
+                <li>
+                    <a href="#">О блоге</a>
+                    <ul>
+                        <li><a href="B:\Блог КРИМ\author.html">Автор</a></li>
+                        <li><a href="B:\Блог КРИМ\social-media.html">Соц. сети</a></li>
+                        <li><a href="B:\Блог КРИМ\polres.html">Полезные ресурсы</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Обратная связь</a>
+                    <ul>
+                        <li><a href="B:\Блог КРИМ\FAQ.html">Частые вопросы</a></li>
+                        <li><a href="B:\Блог КРИМ\zv.html">Задать вопрос</a></li>
+                        <li><a href="B:\Блог КРИМ\pozh.html">Пожелания</a></li>
+                    </ul>
+                </li>
+                <li><a href="B:\Блог КРИМ\avtoriz.html">Авторизоваться</a></li>
+            </ul>
+        </div>
+        <div class="theme-toggle" onclick="toggleTheme()">Сменить тему</div>
+   
+
+    </header>
+    <main>
+        <div class="content">
+            <h1>Социальные сети</h1>
+            <div class="social-description">
+                <p>Подписывайтесь на нас в социальных сетях, чтобы быть в курсе всех новостей и обновлений:</p>
+                <ul>
+                    <li>
+                        <strong>Instagram:</strong> <a href="https://www.instagram.com/kartoshka00000/" target="_blank">@kartoshka00000</a>
+                        <button onclick="window.open('https://www.instagram.com/kartoshka00000/', '_blank')">Перейти</button>
+                        <p>Фото-блог с красивыми и интересными фотографиями из жизни.</p>
+                    </li>
+                    
+                    <li>
+                        <strong>ВКонтакте:</strong> <a href="https://vk.com/zero_five_005" target="_blank">@zero_five_005</a>
+                        <button onclick="window.open('https://vk.com/zero_five_005', '_blank')">Перейти</button>
+                        <p>Сообщество для общения, обмена музыкой и видео, участия в группах по интересам.</p>
+                    </li>
+            
+                    <li>
+                        <strong>YouTube:</strong> <a href="https://www.youtube.com/channel/zefire6409" target="_blank">@zefire6409</a>
+                        <button onclick="window.open('https://www.youtube.com/channel/zefire6409', '_blank')">Перейти</button>
+                        <p>Канал с видео о различных темах, обзорами, руководствами и развлекательным контентом.</p>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="youtube-video">
+                <!-- YouTube видео -->
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/jNQXAC9IVRw" frameborder="0" allowfullscreen></iframe>
+
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>Контактная информация: Телефон - +7(747)125-2945 | Email - next12d@gmail.com | Подписывайтесь на нас в социальных сетях</p>
+    </footer>
+    <script>
+        function toggleTheme() {
+            const body = document.body;
+            if (body.classList.contains('light-theme')) {
+                body.classList.remove('light-theme');
+                body.classList.add('dark-theme');
+            } else {
+                body.classList.remove('dark-theme');
+                body.classList.add('light-theme');
+            }
+        }
+
+
+
+        // Проверяем, есть ли уже сохраненная тема в локальном хранилище
+if (localStorage.getItem('theme') === 'dark') {
+    document.body.classList.add('dark-theme'); // Добавляем класс для темной темы
+}
+
+// Обработчик события изменения темы
+function toggleTheme() {
+    document.body.classList.toggle('dark-theme'); // Переключаем класс для темной темы
+    // Сохраняем выбранную тему в локальное хранилище
+    localStorage.setItem('theme', document.body.classList.contains('dark-theme') ? 'dark' : 'light');
+}
+
+// Привязываем обработчик к кнопке переключения темы
+document.getElementById('theme-toggle').addEventListener('click', toggleTheme);
+
+
+
+
+    </script>
+</body>
+</html>
